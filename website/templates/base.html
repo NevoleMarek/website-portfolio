@@ -1,14 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
+
     <meta charset="UTF-8">
+    <meta name="keywords" content="Portfolio, Machine learning, Data science">
+    <meta name="description" content="Portfolio website">
+    <meta name="author" content="Marek Nevole">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- load static files-->
+    {% load static %}
+
+    <!-- Icon used from https://iconsmind.com/ -->
+    <link rel="icon" href="{% static 'img/favicon-16x16.png' %}"/>
+    <link rel="icon" href="{% static 'img/favicon-32x32.png' %}"/>
+
     <title>M. Nevole</title>
+
+    <style>
+        html{
+            font-size: 125%;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul{
+            background-color: #252525;
+            list-style-type: none;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .navbar li{
+            float: right;
+        }
+        .navbar .home{
+            float: left;
+            font-weight: bold;
+        }
+
+        .navbar .home a{
+            color: #03a6dc;
+            text-transform: uppercase;
+        }
+
+        .navbar a{
+            color: white;
+            display: inline-block;
+            font-family: 'Oswald', sans-serif;
+            text-align: center;
+            text-decoration: none;
+            padding: 0.8rem 1rem;
+
+        }
+
+        .navbar a:hover {
+            background-color: black;
+        }
+
+        .active a{
+            color: #00dc0d;
+            background-color: #001202;
+        }
+
+        .content{
+            margin-top: 3rem;
+        }
+
+    </style>
 </head>
 <body>
-
     <div class="navbar">
         <ul>
-            <li class="{% block active-home %}{% endblock %}"><a href={% url 'home' %}>Home</a></li>
+            <li class="home {% block active-home %}{% endblock %}"><a href={% url 'home' %}>Marek Nevole</a></li>
             <li class="{% block active-about %}{% endblock %}"><a href={% url 'about' %}>About</a></li>
             <li class="{% block active-portfolio %}{% endblock %}"><a href={% url 'portfolio' %}>Portfolio</a></li>
             <li class="{% block active-blog %}{% endblock %}"><a>Blog</a></li>
@@ -16,7 +85,10 @@
         </ul>
     </div>
 
+    <div class="content">
     {% block content %}
     {% endblock %}
+    </div>
+
 </body>
 </html>
