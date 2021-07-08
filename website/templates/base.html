@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>M. Nevole</title>
+</head>
+<body>
+
+    <div class="navbar">
+        <ul>
+            <li class="{% block active-home %}{% endblock %}"><a href={% url 'home' %}>Home</a></li>
+            <li class="{% block active-about %}{% endblock %}"><a href={% url 'about' %}>About</a></li>
+            <li class="{% block active-portfolio %}{% endblock %}"><a href={% url 'portfolio' %}>Portfolio</a></li>
+            <li class="{% block active-blog %}{% endblock %}"><a>Blog</a></li>
+            <li class="{% block active-contact %}{% endblock %}"><a href={% url 'contact' %}>Contact</a></li>
+        </ul>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
