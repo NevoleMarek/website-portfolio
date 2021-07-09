@@ -1,7 +1,3 @@
-html{
-    font-size: 125%;
-}
-
 body{
     padding-top: 60px;
 }
@@ -9,6 +5,15 @@ body{
 *{
     margin: 0;
     padding: 0;
+}
+
+body {
+ font-family: 'Cardo', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+ font-family: 'Oswald', sans-serif;
+ text-transform: uppercase;
 }
 
 .navbar{
@@ -45,7 +50,18 @@ body{
     background-color: #00dc0d;
 }
 
-.content{
-    background-color: #00dc0d;
+.fullscreen{
+    height: 100vh;
+}
 
+.left{
+    text-align: center;
+}
+
+.right{
+    text-align: center;
+}
+
+.nav-scrolled{
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.59);
 }
