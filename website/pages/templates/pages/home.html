@@ -8,26 +8,180 @@ active
 {% endblock %}
 
 {% block content %}
-<div class="row fullscreen align-items-center justify-content-between">
-    <div class="col-md left">
+<!-- Start landing area -->
+<div class="row fullscreen align-items-center justify-content-between ">
+    <div class="col-md landing-left">
         <div class="row">
             <div class="col-md">
                 <h1>Marek Nevole</h1>
             </div>
         </div>
         <div class="row">
-            <div class="col-md">
+            <div class="col-md" style="padding: 10px 0 10px 0;">
                 Aspiring Machine Learning Engineer, Data Scientist
             </div>
         </div>
+        <div class="row">
+            <div class="col-md on-site-button">
+                <a href="{% url 'portfolio' %}">
+                    Projects
+                </a>
+            </div>
+        </div>
     </div>
-    <div class="col-md-5 right">
+    <div class="col-md-5 landing-right">
         <img class="img-fluid rounded-circle"  src="{% static 'img/profile.png' %}" alt="Profile picture">
     </div>
-
 </div>
+<!-- End landing area -->
 
+<!-- Start about area -->
+<div class="padding-section">
+        <div class="d-flex justify-content-start">
+            <h1>About me</h1>
+        </div>
+        <div class="left-border side-padding">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla non arcu lacinia neque faucibus fringilla. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Etiam commodo dui eget wisi. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus.</p>
+        </div>
+        <div class="d-flex justify-content-end on-site-button">
+            <a href="{% url 'about' %}">
+                About
+            </a>
+        </div>
+</div>
+<!-- End about area -->
 
+<!-- Start interests area s -->
+<div class="padding-section">
+    <div class="d-flex justify-content-center center">
+        <div class="bottom-border">
+            <h1>
+                Fields of Interest
+            </h1>
+            <p class="ul-padding">
+                Areas I like to learn about and work on.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-6">
+            <div class="interest">
+                <span>
+                    icon
+                </span>
+                <h3 class="title">
+                    interest
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla non arcu lacinia neque faucibus fringilla.</p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="interest">
+                <span>
+                    icon
+                </span>
+                <h3 class="title">
+                    interest
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla non arcu lacinia neque faucibus fringilla.</p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="interest">
+                <span>
+                    icon
+                </span>
+                <h3 class="title">
+                    interest
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla non arcu lacinia neque faucibus fringilla.</p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="interest">
+                <span>
+                    icon
+                </span>
+                <h3 class="title">
+                    interest
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla non arcu lacinia neque faucibus fringilla.</p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="interest">
+                <span>
+                    icon
+                </span>
+                <h3 class="title">
+                    interest
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla non arcu lacinia neque faucibus fringilla.</p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="interest">
+                <span>
+                    icon
+                </span>
+                <h3 class="title">
+                    interest
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla non arcu lacinia neque faucibus fringilla.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End interests area -->
 
+<!-- Start proficiency area -->
+<div class="padding-section">
+    <div class="d-flex justify-content-end">
+        <h1>Proficiency</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="proficiency">
+                <h5>Python - 5</h5>
+                <div class="progress" style="height: 8px;">
+                    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            <div class="proficiency">
+                <h5>Python ML Frameworks (Tensor-flow) - 5</h5>
+                <div class="progress" style="height: 8px;">
+                    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            <div class="proficiency">
+                <h5>Data preprocessing - 2</h5>
+                <div class="progress" style="height: 8px;">
+                    <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="proficiency">
+                <h5>Databases (SQL, NoSQL) - 4</h5>
+                <div class="progress" style="height: 8px;">
+                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            <div class="proficiency">
+                <h5>Data visualization (Tableau) - 4</h5>
+                <div class="progress" style="height: 8px;">
+                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            <div class="proficiency">
+                <h5>BIG Data (Spark) - 2</h5>
+                <div class="progress" style="height: 8px;">
+                    <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End proficiency area -->
 
 {% endblock %}
