@@ -14,12 +14,6 @@ class About(View):
     def get(self, request):
         return render(request, self.template, {})
 
-class Contact(View):
-    template = 'pages/contact.html'
-
-    def get(self, request):
-        return render(request, self.template, {})
-
 class Portfolio(View):
     template = 'pages/portfolio.html'
 
