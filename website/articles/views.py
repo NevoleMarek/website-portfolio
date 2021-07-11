@@ -29,7 +29,7 @@ class ArticleDeleteView(DeleteView):
 
 
 class ArticleListView(ListView):
-    model = Article
+    queryset = Article.objects.order_by('-created')
     paginate_by = 5
 
 

@@ -6,8 +6,8 @@ from django.urls import reverse
 
 class Article(models.Model):
     title = models.CharField(max_length=50)
-    created = models.DateField(auto_now_add=True)
-    modified = models.DateField(auto_now=True)
+    created = models.DateTimeField(auto_now_add=True)
+    modified = models.DateTimeField(auto_now=True)
     thumbnail = models.ImageField(blank=True)
     description = models.TextField(max_length=500)
     content = models.TextField()
