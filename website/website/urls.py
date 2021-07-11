@@ -22,9 +22,12 @@ from pages.views import (
     Portfolio
 )
 
+from articles.views import blog_view
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', Home.as_view(), name='home'),
     path('about/', About.as_view(), name='about'),
     path('portfolio/', Portfolio.as_view(), name='portfolio'),
+    path('blog/', blog_view, name='blog')
 ]
