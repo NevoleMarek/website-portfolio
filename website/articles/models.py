@@ -10,3 +10,6 @@ class Article(models.Model):
     modified = models.DateField(auto_now=True)
     thumbnail = models.ImageField(blank=True)
     content = models.TextField()
+    
+    def get_absolute_url(self):
+        return reverse('articles:article-detail', kwargs={'pk':self.pk})
