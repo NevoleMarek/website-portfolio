@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 
 from articles.models import Article
@@ -13,4 +13,13 @@ def blog_view(request):
 class ArticleCreateView(CreateView):
     model = Article
     fields = ['title', 'thumbnail', 'content']
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('blog')
+
+class ArticleUpdateView(UpdateView):
+    model = Article
+    fields = ['title', 'thumbnail', 'content']
+    success_url = reverse_lazy('blog')
+
+class ArticleDeleteView(DeleteView):
+    model = Article
+    success_url = reverse_lazy('blog')
