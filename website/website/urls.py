@@ -22,8 +22,6 @@ from pages.views import (
     Portfolio
 )
 
-from articles.views import blog_view
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', Home.as_view(), name='home'),
