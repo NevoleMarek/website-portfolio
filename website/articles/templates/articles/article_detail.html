@@ -1,14 +1,51 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block active-blog %}
 active
 {% endblock %}
 {% block title %}
-Detail | M. Nevole
+{{ object.title }} | M. Nevole
 {% endblock %}
 
 {% block content %}
-    {{ object.title }}
-    {{ object.created }}
-    {{ object.modified }}
-    {{ object.content }}
+    <!-- Return button -->
+    <div class="row ul-padding">
+        <div class="d-flex on-site-button justify-content-start align-self-end">
+            <a href="{% url 'blog' %}"> < Return</a>
+        </div>
+    </div>
+
+    <!-- Start Article -->
+    <div class="col-sm-10 mx-auto">
+        <!-- Article meta data -->
+        <div class="row">
+            <h1>
+                {{ object.title }}
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <p>Created: {{ object.created }}</p>
+            </div>
+            <div class="col-sm-4">
+                <p>Author: <strong>M. Nevole</strong></p>
+            </div>
+            <div class="col-sm-4">
+                <p>Last modified: {{ object.modified }}</p>
+            </div>
+        </div>
+        <!-- Article image -->
+        <div class="col-10 col-sm-9 col-md-7 col-lg-5 col-xl-4 mx-auto ul-padding">
+            {% if not object.thumbnail %}
+                <img class="img-fluid" src="{% static 'img/default-thumbnail.png' %}" alt="article-thumbnail">
+            {% else %}
+                {{ object.thumbnail }}
+            {% endif %}
+        </div>
+        <!-- Article content -->
+        <div class="" style="padding-bottom: 100px">
+            {{ object.content|safe }}
+        </div>
+    </div>
+    <!-- End Article -->
 {% endblock %}

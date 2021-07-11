@@ -125,7 +125,9 @@ h1, h2, h3, h4, h5, h6 {
     .sm-border-right {
         border-right: 2px solid gray;
     }
-
+    .article-img {
+        width: 50%;
+    }
 }
 
 .socials img{
