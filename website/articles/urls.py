@@ -1,7 +1,11 @@
-from django.urls import  path
+from django.urls import path
 
-from articles.views import blog_view
+from .views import (
+    blog_view,
+    ArticleCreateView
+)
 
 urlpatterns = [
-    path('', blog_view, name='blog')
+    path('', blog_view, name='blog'),
+    path('create/', ArticleCreateView.as_view(), name='article-create')
 ]
