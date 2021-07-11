@@ -1,6 +1,10 @@
-from django.views.generic.detail import DetailView
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.views.generic.list import ListView
+from django.views.generic import (
+    CreateView,
+    UpdateView,
+    DeleteView,
+    DetailView,
+    ListView
+)
 from django.urls import reverse_lazy
 
 from articles.models import Article
@@ -23,9 +27,20 @@ class ArticleDeleteView(DeleteView):
     success_url = reverse_lazy('blog')
 
 
+
 class ArticleListView(ListView):
     model = Article
     paginate_by = 5
+
+    TRUNC_LEN = 500
+
+    def get_context_data(self, **kwargs):
+        ctx = super().get_context_data(**kwargs)
+        for i in ctx['object_list']:
+            i.content_short = i.content[:self.TRUNC_LEN]
+            if len(i.content) > self.TRUNC_LEN:
+                i.content_short += '...'
+        return ctx
 
 
 class ArticleDetailView(DetailView):

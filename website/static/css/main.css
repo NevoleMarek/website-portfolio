@@ -121,6 +121,16 @@ h1, h2, h3, h4, h5, h6 {
         border-right: 2px solid gray;
     }
 }
+@media (min-width: 576px){
+    .sm-border-right {
+        border-right: 2px solid gray;
+    }
+}
+@media (max-width: 575px){
+    .article img{
+        padding: 0 100px 0 100px;
+    }
+}
 
 .socials img{
     transition: transform 0.2s;
@@ -171,4 +181,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .proficiency h5{
     padding-top: 20px;
+}
+
+/*
+    BLOG
+ */
+
+.article-header a{
+    text-decoration: none;
+    color: black;
 }
