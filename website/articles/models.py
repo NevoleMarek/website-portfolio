@@ -9,6 +9,7 @@ class Article(models.Model):
     created = models.DateField(auto_now_add=True)
     modified = models.DateField(auto_now=True)
     thumbnail = models.ImageField(blank=True)
+    description = models.TextField(max_length=500)
     content = models.TextField()
     
     def get_absolute_url(self):
